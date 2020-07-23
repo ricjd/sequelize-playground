@@ -10,14 +10,12 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Product.belongsTo(models.Category); 
     }
   };
   Product.init({
     sku: DataTypes.STRING,
     name: DataTypes.STRING,
-    price: DataTypes.DOUBLE,
-    type: DataTypes.STRING
+    price: DataTypes.DOUBLE
   }, {
     sequelize,
     modelName: 'Product',
